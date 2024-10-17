@@ -1,0 +1,227 @@
+[
+       {
+           "EmployeeID": 1,
+           "EmployeeName": "S P Sanjay Babu",
+           "EmployeeDesignation": "Trainee",
+           "EmployeeNumber": 9812345678,
+           "EmployeeAddress": "Periyar Nagar",
+           "EmployeeDateOfJoining": "2024-09-09",
+           "EmployeeBalanceLeave": 3
+       },
+       {
+           "EmployeeID": 2,
+           "EmployeeName": "Vishal Sivakumar",
+           "EmployeeDesignation": "Trainee",
+           "EmployeeNumber": 9883289292,
+           "EmployeeAddress": "Guindy",
+           "EmployeeDateOfJoining": "2024-05-12",
+           "EmployeeBalanceLeave": 7
+       },
+       {
+           "EmployeeID": 3,
+           "EmployeeName": "Loha Priya",
+           "EmployeeDesignation": "Trainee",
+           "EmployeeNumber": 9876543210,
+           "EmployeeAddress": "Mogappair",
+           "EmployeeDateOfJoining": "2024-06-18",
+           "EmployeeBalanceLeave": 2
+       },
+       {
+           "EmployeeID": 4,
+           "EmployeeName": "Rahul Mondal",
+           "EmployeeDesignation": "Trainee",
+           "EmployeeNumber": 9123456789,
+           "EmployeeAddress": "Koyambedu",
+           "EmployeeDateOfJoining": "2024-07-22",
+           "EmployeeBalanceLeave": 9
+       },
+       {
+           "EmployeeID": 5,
+           "EmployeeName": "Amit Patel",
+           "EmployeeDesignation": "Analyst",
+           "EmployeeNumber": 9234567890,
+           "EmployeeAddress": "Nungambakkam",
+           "EmployeeDateOfJoining": "2024-08-01",
+           "EmployeeBalanceLeave": 1
+       },
+       {
+           "EmployeeID": 6,
+           "EmployeeName": "Sonia Singh",
+           "EmployeeDesignation": "HR Manager",
+           "EmployeeNumber": 9987654321,
+           "EmployeeAddress": "T. Nagar",
+           "EmployeeDateOfJoining": "2024-09-10",
+           "EmployeeBalanceLeave": 5
+       },
+       {
+           "EmployeeID": 7,
+           "EmployeeName": "Rohit Nair",
+           "EmployeeDesignation": "System Administrator",
+           "EmployeeNumber": 9874563210,
+           "EmployeeAddress": "Velachery",
+           "EmployeeDateOfJoining": "2024-10-05",
+           "EmployeeBalanceLeave": 4
+       },
+       {
+           "EmployeeID": 8,
+           "EmployeeName": "Kavya Mehta",
+           "EmployeeDesignation": "Consultant",
+           "EmployeeNumber": 9123456780,
+           "EmployeeAddress": "Adyar",
+           "EmployeeDateOfJoining": "2024-11-11",
+           "EmployeeBalanceLeave": 8
+       },
+       {
+           "EmployeeID": 9,
+           "EmployeeName": "Anjali Roy",
+           "EmployeeDesignation": "Project Lead",
+           "EmployeeNumber": 9872345678,
+           "EmployeeAddress": "Anna Nagar",
+           "EmployeeDateOfJoining": "2024-12-09",
+           "EmployeeBalanceLeave": 6
+       },
+       {
+           "EmployeeID": 10,
+           "EmployeeName": "Rajesh Pandey",
+           "EmployeeDesignation": "Data Scientist",
+           "EmployeeNumber": 9234567809,
+           "EmployeeAddress": "Besant Nagar",
+           "EmployeeDateOfJoining": "2025-01-25",
+           "EmployeeBalanceLeave": 2
+       },
+       {
+           "EmployeeID": 11,
+           "EmployeeName": "Simran Kohli",
+           "EmployeeDesignation": "Product Manager",
+           "EmployeeNumber": 9812345670,
+           "EmployeeAddress": "Thiruvanmiyur",
+           "EmployeeDateOfJoining": "2025-02-19",
+           "EmployeeBalanceLeave": 5
+       },
+       {
+           "EmployeeID": 12,
+           "EmployeeName": "Neeraj Chopra",
+           "EmployeeDesignation": "Marketing Specialist",
+           "EmployeeNumber": 9876543219,
+           "EmployeeAddress": "Madipakkam",
+           "EmployeeDateOfJoining": "2025-03-20",
+           "EmployeeBalanceLeave": 1
+       },
+       {
+           "EmployeeID": 13,
+           "EmployeeName": "Deepak Bose",
+           "EmployeeDesignation": "Sales Executive",
+           "EmployeeNumber": 9912345678,
+           "EmployeeAddress": "Chromepet",
+           "EmployeeDateOfJoining": "2025-04-12",
+           "EmployeeBalanceLeave": 7
+       },
+       {
+           "EmployeeID": 14,
+           "EmployeeName": "Vikram Nair",
+           "EmployeeDesignation": "UI/UX Designer",
+           "EmployeeNumber": 9871234560,
+           "EmployeeAddress": "Tambaram",
+           "EmployeeDateOfJoining": "2025-05-14",
+           "EmployeeBalanceLeave": 3
+       },
+       {
+           "EmployeeID": 15,
+           "EmployeeName": "Rohit Raj",
+           "EmployeeDesignation": "Finance Analyst",
+           "EmployeeNumber": 9956782341,
+           "EmployeeAddress": "Perungudi",
+           "EmployeeDateOfJoining": "2025-06-21",
+           "EmployeeBalanceLeave": 6
+       },
+       {
+           "EmployeeID": 16,
+           "EmployeeName": "Anuradha Singh",
+           "EmployeeDesignation": "Backend Developer",
+           "EmployeeNumber": 9965432109,
+           "EmployeeAddress": "Ambattur",
+           "EmployeeDateOfJoining": "2025-07-10",
+           "EmployeeBalanceLeave": 8
+       },
+       {
+           "EmployeeID": 17,
+           "EmployeeName": "Pooja Mishra",
+           "EmployeeDesignation": "Graphic Designer",
+           "EmployeeNumber": 9987654329,
+           "EmployeeAddress": "Kolathur",
+           "EmployeeDateOfJoining": "2025-08-18",
+           "EmployeeBalanceLeave": 4
+       },
+       {
+           "EmployeeID": 18,
+           "EmployeeName": "Arjun Patel",
+           "EmployeeDesignation": "Network Engineer",
+           "EmployeeNumber": 9990123456,
+           "EmployeeAddress": "Kotturpuram",
+           "EmployeeDateOfJoining": "2025-09-02",
+           "EmployeeBalanceLeave": 9
+       },
+       {
+           "EmployeeID": 19,
+           "EmployeeName": "Meera Kapoor",
+           "EmployeeDesignation": "DevOps Engineer",
+           "EmployeeNumber": 9870098765,
+           "EmployeeAddress": "Vadapalani",
+           "EmployeeDateOfJoining": "2025-10-05",
+           "EmployeeBalanceLeave": 6
+       },
+       {
+           "EmployeeID": 20,
+           "EmployeeName": "Rakesh Iyer",
+           "EmployeeDesignation": "Data Analyst",
+           "EmployeeNumber": 9123456789,
+           "EmployeeAddress": "Royapettah",
+           "EmployeeDateOfJoining": "2025-11-19",
+           "EmployeeBalanceLeave": 2
+       },
+       {
+           "EmployeeID": 21,
+           "EmployeeName": "Nisha Das",
+           "EmployeeDesignation": "Scrum Master",
+           "EmployeeNumber": 9865432101,
+           "EmployeeAddress": "Mylapore",
+           "EmployeeDateOfJoining": "2025-12-03",
+           "EmployeeBalanceLeave": 5
+       },
+       {
+           "EmployeeID": 22,
+           "EmployeeName": "Amitabh Joshi",
+           "EmployeeDesignation": "Security Specialist",
+           "EmployeeNumber": 9912345675,
+           "EmployeeAddress": "Egmore",
+           "EmployeeDateOfJoining": "2026-01-10",
+           "EmployeeBalanceLeave": 7
+       },
+       {
+           "EmployeeID": 23,
+           "EmployeeName": "Pooja Reddy",
+           "EmployeeDesignation": "Content Writer",
+           "EmployeeNumber": 9988765432,
+           "EmployeeAddress": "Little Mount",
+           "EmployeeDateOfJoining": "2026-02-08",
+           "EmployeeBalanceLeave": 9
+       },
+       {
+           "EmployeeID": 24,
+           "EmployeeName": "Rajesh Kumar",
+           "EmployeeDesignation": "Mobile Developer",
+           "EmployeeNumber": 9877654321,
+           "EmployeeAddress": "Taramani",
+           "EmployeeDateOfJoining": "2026-03-20",
+           "EmployeeBalanceLeave": 2
+       },
+       {
+           "EmployeeID": 25,
+           "EmployeeName": "Anita Rao",
+           "EmployeeDesignation": "Business Analyst",
+           "EmployeeNumber": 9120098765,
+           "EmployeeAddress": "Red Hills",
+           "EmployeeDateOfJoining": "2026-04-15",
+           "EmployeeBalanceLeave": 3
+       }
+]

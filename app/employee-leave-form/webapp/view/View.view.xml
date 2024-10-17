@@ -1,0 +1,43 @@
+<mvc:View xmlns:core="sap.ui.core" 
+          xmlns:mvc="sap.ui.core.mvc" 
+          xmlns="sap.m" 
+          xmlns:macros="sap.fe.macros"
+          xmlns:html="http://www.w3.org/1999/xhtml" 
+          controllerName="employeeleaveform.controller.View"
+          displayBlock="true">
+
+<Page id="employeeDetails" title="{i18n>MainTitle}">
+    <content>
+        <VBox>
+            <Label text="Employee ID" />
+            <Input value="{EmployeesID}" editable="false" />
+
+            <Label text="Employee Name" />
+            <Input value="{EmployeeName}" />
+
+            <Label text="Designation" />
+            <Input value="{EmployeeDesignation}" />
+
+            <Label text="Number" />
+            <Input value="{EmployeeNumber}" />
+
+            <Label text="Address" />
+            <Input value="{EmployeeAddress}" />
+
+            <Label text="Date of Joining" />
+            <DatePicker value="{EmployeeDateOfJoining}" />
+
+            <Label text="Balance Leave" />
+            <Input value="{EmployeeBalanceLeave}" />
+        </VBox>
+    </content>
+
+        <footer>
+            <Bar>
+                <contentRight>
+                    <Button text="Save" press="onSaveEmployee" />
+                </contentRight>
+            </Bar>
+        </footer>
+</Page>
+</mvc:View>

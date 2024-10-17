@@ -1,0 +1,147 @@
+_schema-version: 3.3.0
+ID: Employee-Leave-Form-Custom
+description: A simple CAP project.
+version: 1.0.0
+modules:
+- name: Employee-Leave-Form-Custom-srv
+  type: nodejs
+  path: gen/srv
+  requires:
+  - name: Employee-Leave-Form-Custom-db
+  - name: Employee-Leave-Form-Custom-postgres
+  - name: Employee-Leave-Form-Custom-messaging
+  - name: Employee-Leave-Form-Custom-connectivity
+  - name: Employee-Leave-Form-Custom-destination
+  provides:
+  - name: srv-api
+    properties:
+      srv-url: ${default-url}
+  parameters:
+    buildpack: nodejs_buildpack
+    readiness-health-check-http-endpoint: /health
+    readiness-health-check-type: http
+  build-parameters:
+    builder: npm
+- name: Employee-Leave-Form-Custom-db-deployer
+  type: hdb
+  path: gen/pg/db
+  requires:
+  - name: Employee-Leave-Form-Custom-db
+  parameters:
+    buildpack: nodejs_buildpack
+- name: Employee-Leave-Form-Custom-postgres-deployer
+  type: nodejs
+  path: gen/pg
+  requires:
+  - name: Employee-Leave-Form-Custom-postgres
+  parameters:
+    buildpack: nodejs_buildpack
+    no-route: true
+    no-start: true
+    tasks:
+    - command: npm start
+      name: deploy-to-postgresql
+- name: Employee-Leave-Form-Custom
+  type: approuter.nodejs
+  path: app/router
+  requires:
+  - name: srv-api
+    group: destinations
+    properties:
+      forwardAuthToken: true
+      name: srv-api
+      url: ~{srv-url}
+  - name: Employee-Leave-Form-Custom-destination
+  - name: Employee-Leave-Form-Custom-html5-runtime
+  parameters:
+    disk-quota: 256M
+    keep-existing-routes: true
+    memory: 256M
+- name: Employee-Leave-Form-Custom-app-deployer
+  type: com.sap.application.content
+  path: gen/pg/db
+  requires:
+  - name: Employee-Leave-Form-Custom-html5-repo-host
+    parameters:
+      content-target: true
+  build-parameters:
+    build-result: app/
+    requires:
+    - artifacts:
+      - employeeleaveform.zip
+      name: employeeleaveform
+      target-path: app//
+- name: employeeleaveform
+  type: html5
+  path: app/employee-leave-form
+  build-parameters:
+    build-result: dist
+    builder: custom
+    commands:
+    - npm install
+    - npm run build:cf
+    supported-platforms: []
+resources:
+- name: Employee-Leave-Form-Custom-db
+  type: com.sap.xs.hdi-container
+  parameters:
+    service: hana
+    service-plan: hdi-shared
+- name: Employee-Leave-Form-Custom-postgres
+  type: org.cloudfoundry.managed-service
+  parameters:
+    service: postgresql-db
+    service-plan: development
+- name: Employee-Leave-Form-Custom-messaging
+  type: org.cloudfoundry.managed-service
+  parameters:
+    path: ./event-mesh.json
+    service: enterprise-messaging
+    service-plan: default
+- name: Employee-Leave-Form-Custom-connectivity
+  type: org.cloudfoundry.managed-service
+  parameters:
+    service: connectivity
+    service-plan: lite
+- name: Employee-Leave-Form-Custom-destination
+  type: org.cloudfoundry.managed-service
+  parameters:
+    config:
+      HTML5Runtime_enabled: false
+      init_data:
+        instance:
+          destinations:
+          - Authentication: OAuth2UserTokenExchange
+            HTML5.DynamicDestination: true
+            HTML5.ForwardAuthToken: true
+            Name: Employee-Leave-Form-Custom-srv-api
+            ProxyType: Internet
+            Type: HTTP
+            URL: ~{srv-api/srv-url}
+          - Authentication: NoAuthentication
+            Name: ui5
+            ProxyType: Internet
+            Type: HTTP
+            URL: https://ui5.sap.com
+          existing_destinations_policy: update
+    service: destination
+    service-plan: lite
+- name: Employee-Leave-Form-Custom-html5-repo-host
+  type: org.cloudfoundry.managed-service
+  parameters:
+    service: html5-apps-repo
+    service-plan: app-host
+- name: Employee-Leave-Form-Custom-html5-runtime
+  type: org.cloudfoundry.managed-service
+  parameters:
+    service: html5-apps-repo
+    service-plan: app-runtime
+parameters:
+  deploy_mode: html5-repo
+  enable-parallel-deployments: true
+build-parameters:
+  before-all:
+  - builder: custom
+    commands:
+    - npm ci
+    - npx cds build --production
